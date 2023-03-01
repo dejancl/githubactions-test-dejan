@@ -1,0 +1,13 @@
+name: inkrementacija
+on:
+  push:
+    branches:
+      - main
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: increment1
+        run: |
+          cd brojac
+          echo "1" >> incremen1.txt
