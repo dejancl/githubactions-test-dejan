@@ -7,7 +7,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: increment1
         run: |
           cd brojac
-          echo "1" >> incremen1.txt
+          echo "1" >> increment1.txt
