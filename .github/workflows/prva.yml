@@ -14,3 +14,11 @@ jobs:
         run: |
           cd brojac
           echo "1" >> increment1.txt
+      - name: push_changes
+        run: | 
+          git config --local user.email "example@example.com"
+          git config --local user.name "AntVil"
+          git add .
+          git commit -m "123" 
+          git push
+
