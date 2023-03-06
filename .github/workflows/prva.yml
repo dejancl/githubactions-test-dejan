@@ -1,4 +1,4 @@
-name: inkrementacija
+name: inkrementacija1
 on:
   push:
     paths-ignore:
@@ -15,6 +15,9 @@ jobs:
       - name: increment1
         run: |
           echo $(source ./increment.sh $(cat brojac/increment1.txt)) > brojac/increment1.txt
+      - name: increment2
+        run: |
+          echo $(source ./increment2.sh $(cat brojac/increment2.txt)) > brojac/increment2.txt
       - name: push_changes
         run: | 
           git config --local user.email "example@example.com"
