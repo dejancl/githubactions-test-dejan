@@ -19,13 +19,13 @@ jobs:
         id: increment1
         run: |
           echo $(source ./increment.sh $(cat brojac/increment1.txt)) > brojac/increment1.txt
-          export INCREMENT_VALUE=${echo brojac/increment1.txt}
+          export INCREMENT_VALUE=$(echo brojac/increment1.txt)
           echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
       - name: increment2
         id: increment2
         run: |
           echo $(source ./increment2.sh $(cat brojac/increment2.txt)) > brojac/increment2.txt
-          export INCREMENT_VALUE=${echo brojac/increment2.txt}
+          export INCREMENT_VALUE=$(echo brojac/increment2.txt)
           echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
       - name: push_changes
         run: | 
