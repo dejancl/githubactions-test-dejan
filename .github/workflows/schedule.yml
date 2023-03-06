@@ -1,0 +1,22 @@
+name: schedule
+on:
+  schedule:
+    - cron: '0/10 * * * *'
+jobs: 
+  issue:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: increment3
+        run: |
+          echo $(source ./increment3.sh $(cat zakazani_brojac/zakazani.txt)) > zakazani_brojac/zakazani.txt
+          export INCREMENT_VALUE=$(cat zakazani_brojac/zakazani.txt)
+          echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
+          git config --local user.email "example@example.com"
+          git config --local user.name "AntVil"
+          git add .
+          git commit -m "123" 
+          git push 
+    

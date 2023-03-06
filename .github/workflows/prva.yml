@@ -41,6 +41,6 @@ jobs:
       - name: outputs
         run : |
           echo ${{needs.job1.outputs.vrijednost1}}
-          echo ${{needs.job2.outputs.vrijednost2}}
+          echo ${{needs.job1.outputs.vrijednost2}}
 
 
