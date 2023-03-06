@@ -15,9 +15,9 @@ jobs:
       - name: increment1
         run: |
           cat brojac/increment1.txt
-          source ./increment.bash 2
-          source ./increment.bash $(cat brojac/increment1.txt
-          echo $(source ./increment.bash $(cat brojac/increment1.txt)) > brojac/increment1.txt
+          source ./increment.sh 2
+          source ./increment.sh $(cat brojac/increment1.txt
+          echo $(source ./increment.sh $(cat brojac/increment1.txt)) > brojac/increment1.txt
       - name: push_changes
         run: | 
           git config --local user.email "example@example.com"
