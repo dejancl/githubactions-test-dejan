@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       vrijednost1: ${{ steps.increment1.outputs.vrijednost }}
-      vrijednost2: ${{ steps.increment2.outputs.vrijednost }}
+      vrijednost2: ${{ steps.increment2.outputs.vrijednost2 }}
     steps: 
       - uses: actions/checkout@v3
         with:
@@ -25,8 +25,8 @@ jobs:
         id: increment2
         run: |
           echo $(source ./increment2.sh $(cat brojac/increment2.txt)) > brojac/increment2.txt
-          export INCREMENT_VALUE=$(cat brojac/increment2.txt)
-          echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
+          export INCREMENT_VALUE2=$(cat brojac/increment2.txt)
+          echo "vrijednost2=$INCREMENT_VALUE2" >> $GITHUB_OUTPUT
       - name: push_changes
         run: | 
           git config --local user.email "example@example.com"
