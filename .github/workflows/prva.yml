@@ -1,4 +1,4 @@
-name: inkrementacija1
+name: inkrementacija
 on:
   push:
     paths-ignore:
