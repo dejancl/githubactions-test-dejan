@@ -1,7 +1,7 @@
 name: schedule
 on:
   schedule:
-    - cron: '0/10 * * * *'
+    - cron: '*/10 * * * *'
 jobs: 
   issue:
     runs-on: ubuntu-latest
