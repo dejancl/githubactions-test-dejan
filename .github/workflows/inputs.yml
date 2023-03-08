@@ -13,11 +13,24 @@ on:
         required: true
       
 jobs:
-  build-artifact:
-    runs-on: ubuntu-latest
+       job1:
+       build-artifact:
+         runs-on: ubuntu-latest
 
-    steps:
-      - run: |
-          echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
-          echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
-          
+         steps:
+         - run: |
+             echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
+             echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
+ 
+             echo $(source ./inputi.sh $(cat inputi/zbir.txt)) > inputi/zbir.txt
+             export INCREMENT_VALUE=$(cat inputi/zbir.txt)
+             echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
+
+       job2:
+         runs-on: ubuntu-latest
+         needs: job1
+         steps:
+           - name: zbir
+             run : |
+               echo ${{needs.job1.outputs.vrijednost}}
+               
