@@ -18,7 +18,8 @@ jobs:
 
     steps:
       - run: |
+      
           echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
           echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
           echo $inputi/zbir.txt
-          
+
