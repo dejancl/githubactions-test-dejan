@@ -20,5 +20,7 @@ jobs:
       - run: |
           echo " ${{ github.event.inputs.inputs1 }}"
           echo " ${{ github.event.inputs.inputs2 }}"
-          echo $ inputi/zbir.txt
+          echo echo $(source ./inputi.sh $(cat inputi/zbir.txt)) > inputi/zbir.txt.txt
+          export INCREMENT_VALUE=$(cat inputi/zbir.txt)
+          echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
 
