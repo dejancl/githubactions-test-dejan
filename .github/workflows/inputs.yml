@@ -17,7 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: |
+      - name: Echoing
+        run: |
           echo " ${{ github.event.inputs.inputs1 }}"
           echo " ${{ github.event.inputs.inputs2 }}"
+      - name: Sum
+        run: |
+          source ./input.sh ${{ github.event.inputs.inputs1 }} ${{ github.event.inputs.inputs2 }}
           
