@@ -4,7 +4,7 @@ on:
     
 jobs:
     do-something:
-      runs: ubuntu-latest
+      runs-on: ubuntu-latest
       steps: 
-        - run: echo: "Hello! I've been triggered manually"
-        
+        - run: echo "Hello! I've been triggered manually!"
+
