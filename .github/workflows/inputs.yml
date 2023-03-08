@@ -26,5 +26,5 @@ jobs:
           echo " ${{ github.event.inputs.inputs2 }}"
       - name: Sum
         run: |
-          source ./input.sh ${{ github.event.inputs.inputs1 }} ${{ github.event.inputs.inputs2 }}
+          source ./inputi.sh ${{ github.event.inputs.inputs1 }} ${{ github.event.inputs.inputs2 }}
           
