@@ -21,9 +21,7 @@ on:
           echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
           echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
  
-          echo $(source ./inputi.sh $(cat inputi/zbir.txt)) > inputi/zbir.txt
-          export INCREMENT_VALUE=$(cat inputi/zbir.txt)
-          echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
+          
 
       
                
