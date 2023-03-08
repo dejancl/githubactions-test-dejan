@@ -14,12 +14,12 @@ on:
       
     job:
       build-artifact:
-      runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
 
-      steps:
-      - run: |
-          echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
-          echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
+        steps:
+         - run: |
+             echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
+             echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
  
           
 
