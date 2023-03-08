@@ -20,7 +20,4 @@ jobs:
       - run: |
           echo " ${{ github.event.inputs.inputs1 }}"
           echo " ${{ github.event.inputs.inputs2 }}"
-          echo $(source ./inputi.sh $(cat githubactions-test-dejan/inputi/zbir.txt)) > githubactions-test-dejan/inputi/zbir.txt
-          export INCREMENT_VALUE=$(cat githubactions-test-dejan/inputi/zbir.txt)
-          echo "vrijednost=$INCREMENT_VALUE" >> $GITHUB_OUTPUT
-
+          
