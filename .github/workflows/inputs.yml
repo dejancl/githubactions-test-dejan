@@ -20,4 +20,4 @@ jobs:
       - run: |
           echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
           echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
- 
+          echo $(source ./inputi.sh  > inputi/zbir.txt
