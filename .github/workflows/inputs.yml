@@ -1,0 +1,23 @@
+name: zadatak sa inputima
+
+on:
+  workflow_dispatch:
+    inputs:
+      inputs1:
+        description: Unijeti prvi input
+        type: string
+        required: true
+      inputs2:
+        description: Unijeti drugi input
+        type: string
+        required: true
+      
+jobs:
+  build-artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo "Prvi parametar ${{ github.event.inputs.inputs1 }}"
+          echo "Drugi parametar ${{ github.event.inputs.inputs2 }}"
+          
