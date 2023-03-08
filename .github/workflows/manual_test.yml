@@ -1,0 +1,10 @@
+name: Manual test
+on:
+  workflow_dispatch:
+    
+jobs:
+    do-something:
+      runs: ubuntu-latest
+      steps: 
+        - run: echo: "Hello! I've been triggered manually"
+        
