@@ -25,5 +25,5 @@ jobs:
           echo " ${{ github.event.inputs.input2 }}"
       - name: pretraga
         run: |
-          source ./naziv_fajla.sh ${{ github.event.inputs.input1 }}" ${{ github.event.inputs.input2 }}"
-    
+          source ./naziv_fajla.sh ${{ github.event.inputs.input1 }} ${{ github.event.inputs.input2 }}
+   
