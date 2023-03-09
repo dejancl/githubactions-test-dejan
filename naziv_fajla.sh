@@ -3,10 +3,10 @@
 FILE="$1"
 if [ -d "$FILE" ]
 then
-    # The /my-dir directory exists, so print a message
-    echo "The /my-dir directory exists."
+    # The /file exists, so print a message
+    echo "The /file exists."
 else
-    # The /my-dir directory does not exist, so print a message and create it
-    echo "The /my-dir directory does not exist. Creating it now..."
+    # The /file does not exist, so print a message and create it
+    echo "The /file does not exist. Creating it now..."
     touch $FILE
 fi
