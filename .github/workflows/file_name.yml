@@ -23,4 +23,7 @@ jobs:
         run: |
           echo " ${{ github.event.inputs.naziv_fajla }}"
           echo " ${{ github.event.inputs.vrednost }}"
+      - name: pretraga
+        run: |
+          source ./naziv_fajla.sh ${{ github.event.inputs.naziv_fajla }}" ${{ github.event.inputs.vrednost }}"
     
