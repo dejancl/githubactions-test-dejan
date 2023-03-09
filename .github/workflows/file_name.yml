@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       - name: Echoing
         run: |
-          echo " ${{ github.event.inputs.naziv_fajla }}"
+          echo " ${{ github.event.inputs.file }}"
           echo " ${{ github.event.inputs.vrednost }}"
       - name: pretraga
         run: |
