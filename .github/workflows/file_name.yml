@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       file:
-        description: name file
+        description: name_file
         type: string
         required: true
       vrednost:
