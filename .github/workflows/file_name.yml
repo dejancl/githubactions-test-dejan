@@ -3,7 +3,7 @@ name: file_name
 on:
   workflow_dispatch:
     inputs:
-      naziv_fajla:
+      file:
         description: name file
         type: string
         required: true
