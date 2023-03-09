@@ -8,13 +8,14 @@ on:
         type: string
         required: true
 jobs:
-  build-artifact:
-    runs-on: ubuntu-latest
+    build-artifact:
+      runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Echoing
-        run: |
-          echo " ${{ github.event.inputs.inputs1 }}"
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: Echoing
+          run: |
+            echo " ${{ github.event.inputs.inputs1 }}"
+    
