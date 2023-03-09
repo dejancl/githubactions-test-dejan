@@ -8,5 +8,5 @@ then
 else
     # The '$file' does not exist, so print a message and create it
     echo "The '$file' does not exist. Creating it now..."
-    mkdir $file
+    echo $2 >> $1
 fi
