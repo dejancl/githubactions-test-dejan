@@ -3,19 +3,24 @@ name: file_name
 on:
   workflow_dispatch:
     inputs:
-      inputs1:
+      naziv_fajla:
         description: name file
         type: string
         required: true
+      vrednost:
+        description: vrednost
+        type: string
+        required: true
 jobs:
-    build-artifact:
-      runs-on: ubuntu-latest
+  build-artifact:
+    runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v3
-          with:
-            fetch-depth: 0
-        - name: Echoing
-          run: |
-            echo " ${{ github.event.inputs.inputs1 }}"
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Echoing
+        run: |
+          echo " ${{ github.event.inputs.naziv_fajla }}"
+          echo " ${{ github.event.inputs.vrednost }}"
     
