@@ -1,12 +1,12 @@
 #! bin/bash
 
-FILE="$1"
-if [ -d "$FILE" ]
+file="$1"
+if [ -f "$file" ]
 then
-    # The /file exists, so print a message
-    echo "The /file exists."
+    # The '$file' exists, so print a message
+    echo "The '$file exists."
 else
-    # The /file does not exist, so print a message and create it
-    echo "The /file does not exist. Creating it now..."
-    touch $FILE
+    # The '$file' does not exist, so print a message and create it
+    echo "The '$file' does not exist. Creating it now..."
+    mkdir $file
 fi
