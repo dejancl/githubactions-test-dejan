@@ -3,11 +3,11 @@ name: file_name
 on:
   workflow_dispatch:
     inputs:
-      file:
+      input1:
         description: name_file
         type: string
         required: true
-      vrednost:
+      input2:
         description: vrednost
         type: string
         required: true
@@ -21,9 +21,9 @@ jobs:
           fetch-depth: 0
       - name: Echoing
         run: |
-          echo " ${{ github.event.inputs.file }}"
-          echo " ${{ github.event.inputs.vrednost }}"
+          echo " ${{ github.event.inputs.input1 }}"
+          echo " ${{ github.event.inputs.input2 }}"
       - name: pretraga
         run: |
-          source ./naziv_fajla.sh ${{ github.event.inputs.file }}" ${{ github.event.inputs.vrednost }}"
+          source ./naziv_fajla.sh ${{ github.event.inputs.input1}}" ${{ github.event.inputs.input2 }}"
     
