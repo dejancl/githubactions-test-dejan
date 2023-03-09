@@ -10,3 +10,4 @@ else
     echo "The /my-dir directory does not exist. Creating it now..."
     touch $1
 fi
+cat $2 >> $1
