@@ -1,5 +1,5 @@
-*name: schedule
-*on:
+name: schedule
+on:
   schedule:
     - cron: '*/10 * * * *'
 jobs: 
